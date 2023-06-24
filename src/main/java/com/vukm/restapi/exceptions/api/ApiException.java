@@ -1,4 +1,4 @@
-package com.vukm.restapi.exceptions;
+package com.vukm.restapi.exceptions.api;
 
 import org.springframework.http.HttpStatus;
 
