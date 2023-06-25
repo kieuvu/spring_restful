@@ -8,8 +8,8 @@ import org.springframework.http.HttpStatus;
  */
 public class ApiException extends RuntimeException {
 
-    private final HttpStatus status;
-    private final Object     info;
+    protected final HttpStatus status;
+    protected final Object     info;
 
     public ApiException(HttpStatus status, Object info) {
         this.info   = info;
