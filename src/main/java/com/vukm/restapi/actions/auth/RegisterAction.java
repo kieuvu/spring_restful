@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
+
 /**
  * @author kieuvu
  * Created on 25/06/2023.
@@ -23,8 +25,8 @@ public class RegisterAction {
     }
 
     @PostMapping("auth/register")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void handle(@RequestBody RegisterRequestDTO request) {
+    @ResponseStatus(HttpStatus.CREATED)
+    public void handle(@Valid @RequestBody RegisterRequestDTO request) {
         this.authService.register(request);
     }
 }
