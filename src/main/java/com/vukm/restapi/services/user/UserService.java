@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
  * Created on 25/06/2023.
  */
 @Service
-public class UserService implements UserServiceInterface {
+public class UserService {
     private final UserRepository userRepository;
 
     @Autowired

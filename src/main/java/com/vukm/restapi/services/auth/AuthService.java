@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
  * Created on 25/06/2023.
  */
 @Service
-public class AuthService implements AuthServiceInterface {
+public class AuthService {
     private final UserService           userService;
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
 

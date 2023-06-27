@@ -34,9 +34,7 @@ public class ApiExceptionHandler {
 
         ex.getBindingResult()
           .getAllErrors()
-          .forEach(error -> {
-              errorMessages.add(error.getDefaultMessage());
-          });
+          .forEach(error -> errorMessages.add(error.getDefaultMessage()));
 
         return ResponseEntity.status(HttpStatus.BAD_REQUEST)
                              .body(new FailedRequest(HttpStatus.BAD_REQUEST, errorMessages));
