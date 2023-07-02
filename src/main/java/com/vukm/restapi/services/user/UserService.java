@@ -35,4 +35,8 @@ public class UserService {
 
         this.userRepository.save(user);
     }
+
+    public UserEntity getUserByEmail(String email) {
+        return this.userRepository.findByEmail(email);
+    }
 }
