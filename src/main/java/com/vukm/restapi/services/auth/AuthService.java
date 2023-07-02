@@ -24,7 +24,6 @@ public class AuthService {
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
     }
 
-    @Override
     public void register(RegisterRequestDTO request) throws ApiException {
         String email    = request.getEmail();
         String username = request.getUsername();
