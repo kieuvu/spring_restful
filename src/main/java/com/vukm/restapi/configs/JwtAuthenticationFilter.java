@@ -22,11 +22,10 @@ import java.io.IOException;
  */
 @Component
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
-    @Autowired
     private final JwtService      jwtService;
-    @Autowired
     private final UserInfoService userInfoService;
 
+    @Autowired
     public JwtAuthenticationFilter(UserInfoService userInfoService, JwtService jwtService) {
         this.userInfoService = userInfoService;
         this.jwtService      = jwtService;
